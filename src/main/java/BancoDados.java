@@ -54,12 +54,14 @@ public class BancoDados {
     System.out.println();
   }
 
-  public void adicionar(Tarefa tarefa) {
-    if (tarefas.contains(tarefa)) {
-      System.out.println("Essa tarefa não pode ser adicionada, pois já existe uma tarefa com esse título. Os títulos devem ser únicos!");
-      return;
+  public void adicionar(Tarefa nova_tarefa) {
+    for (Tarefa tarefa : tarefas) {
+      if (tarefa.getTitulo().equals(nova_tarefa.getTitulo())){
+        System.out.println("Essa tarefa não pode ser adicionada, pois já existe uma tarefa com esse título. Os títulos devem ser únicos!");
+        return;
+      }
     }
-    tarefas.add(tarefa);
+    tarefas.add(nova_tarefa);
   }
 
   public void exibir(Ordem ordem) { // Exibi os dados na ordem expecificada

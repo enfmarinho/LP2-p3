@@ -90,13 +90,4 @@ public class Tarefa {
         
       return ChronoUnit.DAYS.between(dataAtual, dataPrazo);
     }
-
-    public boolean equals(Tarefa t2) {
-        if (getClass() == t2.getClass()) {
-            return true;
-        } else if (t2 == null) {
-            return false;
-        }
-        return titulo.equals(t2.titulo);
-    }
 }
