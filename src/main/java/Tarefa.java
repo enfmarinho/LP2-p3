@@ -43,27 +43,27 @@ public class Tarefa {
       concluido = false;
     }
 
-    public void alterar(DadosTarefa dadosAlterar, String novoValor){ // atribui novo_valor a dado_a_alterar
-      switch (dadosAlterar) {
+    public void alterar(DadosTarefa dados_alterar, String novo_valor){ // atribui novo_valor a dado_a_alterar
+      switch (dados_alterar) {
         case titulo:
-          titulo = novoValor;
+          titulo = novo_valor;
           break;
         case descricao:
-          descricao = novoValor;
+          descricao = novo_valor;
           break;
         case prazo:
-          prazo = converter_prazo(novoValor);
+          prazo = converter_prazo(novo_valor);
           break;
         default:
-          alterar(dadosAlterar, Integer.parseInt(novoValor));
+          alterar(dados_alterar, Integer.parseInt(novo_valor));
           break;
       }
     }
 
-    public void alterar(DadosTarefa dadosAlterar, long novoValor){ // atribui novo_valor a dado_a_alterar
-      switch (dadosAlterar) {
+    public void alterar(DadosTarefa dados_alterar, long novo_valor){ // atribui novo_valor a dado_a_alterar
+      switch (dados_alterar) {
         case prioridade:
-          prioridade = novoValor;
+          prioridade = novo_valor;
           break;
         default:
           break;
@@ -83,11 +83,11 @@ public class Tarefa {
     }
 
     private long converter_prazo(String prazo) {
-      LocalDate dataAtual = LocalDate.now();
+      LocalDate data_atual = LocalDate.now();
 
       DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-      LocalDate dataPrazo = LocalDate.parse(prazo, formatter);
+      LocalDate data_prazo = LocalDate.parse(prazo, formatter);
         
-      return ChronoUnit.DAYS.between(dataAtual, dataPrazo);
+      return ChronoUnit.DAYS.between(data_atual, data_prazo);
     }
 }

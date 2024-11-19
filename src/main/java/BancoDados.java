@@ -21,12 +21,12 @@ public class BancoDados {
     // TODO
   }
 
-  public void alterar(String titulo, Tarefa.DadosTarefa dadoAlterar, String novo_valor) {
+  public void alterar(String titulo, Tarefa.DadosTarefa dado_alterar, String novo_valor) {
     for (Tarefa tarefa : tarefas) {
       if (tarefa.getTitulo().equals(titulo)) {
         System.out.println("A seguinte tarefa será alterada: ");
         tarefa.imprimir();
-        tarefa.alterar(dadoAlterar, novo_valor);
+        tarefa.alterar(dado_alterar, novo_valor);
         System.out.println("Agora está:");
         tarefa.imprimir();
         System.out.println();
