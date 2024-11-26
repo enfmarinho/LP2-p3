@@ -1,0 +1,30 @@
+Título: Prova de estatistica
+Descrição: Sala 3G1
+Prioridade: 10
+Prazo: 05/12/2024
+Concluido: false
+Título: Prova de SO
+Descrição: Sala 3E1
+Prioridade: 10
+Prazo: 27/11/2024
+Concluido: false
+Título: Prova de LFA
+Descrição: Sala 3E1
+Prioridade: 10
+Prazo: 02/12/2024
+Concluido: false
+Título: Prova de AS
+Descrição: Sala IMD B203
+Prioridade: 10
+Prazo: 29/11/2024
+Concluido: false
+Título: Fase 1 e 2 de LP2
+Descrição: Prazo final pra entrega da fase 1 e 2 de LP2
+Prioridade: 12
+Prazo: 26/11/2024
+Concluido: false
+Título: Estudar SO
+Descrição: estudar SO
+Prioridade: 4
+Prazo: 25/11/2024
+Concluido: false
