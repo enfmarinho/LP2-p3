@@ -13,11 +13,12 @@ public class Tarefa {
         prioridade, titulo, descricao, prazo
     }
 
-    public Tarefa(String titulo, String descricao, long prioridade, String prazo){
+    public Tarefa(String titulo, String descricao, long prioridade, String prazo, Boolean concluido) {
         this.prioridade = prioridade;
         this.titulo = titulo;
         this.descricao = descricao;
         this.prazo = converter_prazo(prazo);
+        this.concluido = concluido;
     }
 
     public Tarefa(String titulo){
@@ -25,14 +26,16 @@ public class Tarefa {
         this.descricao = "";
         this.prioridade = 0;
         this.prazo = 0;
+        this.concluido = false;
     }
 
-    public void imprimir(){
-      System.out.println("Título: " + titulo);
-      System.out.println("Descrição: " + descricao);
-      System.out.println("Prioridade: " + prioridade);
-      System.out.println("Prazo: " + LocalDate.now().plusDays(prazo));
-      System.out.println("Concluido: " + concluido);
+    public String toString() {
+      DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+      return "Título: " + titulo + "\n" + 
+             "Descrição: " + descricao + "\n" +
+             "Prioridade: " + prioridade + "\n" + 
+             "Prazo: " + LocalDate.now().plusDays(prazo).format(formatter) + "\n" +
+             "Concluido: " + concluido + "\n";
     }
 
     public void concluir() {

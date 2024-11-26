@@ -18,6 +18,7 @@ public class InterfaceUsuario {
       renderize();
       processe_input();
     }
+    bancoDados.salvarDados();
   }
 
   public void renderize() {
@@ -68,7 +69,7 @@ public class InterfaceUsuario {
     scanner.nextLine();
     System.out.print("Prazo(dd/mm/aaaa): ");
     String prazo = scanner.nextLine().trim();
-    return new Tarefa(titulo, descricao, prioridade, prazo);
+    return new Tarefa(titulo, descricao, prioridade, prazo, false);
   }
 
   private BancoDados.Ordem ler_ordem() {
